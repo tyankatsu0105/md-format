@@ -1,0 +1,17 @@
+{
+  "name": "md-format",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "edit": "onchange 'index.md' -- prettier --write {{changed}} && textlint {{changed}}"
+  },
+  "devDependencies": {
+    "onchange": "^4.0.0",
+    "prettier": "^1.13.6",
+    "textlint": "^10.2.1",
+    "textlint-rule-preset-japanese": "^4.0.0",
+    "textlint-rule-preset-jtf-style": "^2.3.1"
+  }
+}
