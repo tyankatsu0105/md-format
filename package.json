@@ -4,10 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
+  "config": {
+    "target_file": "./index.md"
+  },
   "scripts": {
-    "edit": "onchange 'index.md' -- prettier --write {{changed}} && textlint {{changed}}"
+    "prettier": "onchange $npm_package_config_target_file -- prettier --write {{changed}}",
+    "textlint": "onchange $npm_package_config_target_file -- textlint {{changed}}",
+    "release": "npm-run-all -p prettier textlint"
   },
   "devDependencies": {
+    "npm-run-all": "^4.1.3",
     "onchange": "^4.0.0",
     "prettier": "^1.13.6",
     "textlint": "^10.2.1",
