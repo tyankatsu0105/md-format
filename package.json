@@ -10,7 +10,7 @@
   "scripts": {
     "prettier": "onchange $npm_package_config_target_file -- prettier --write {{changed}}",
     "textlint": "onchange $npm_package_config_target_file -- textlint {{changed}}",
-    "release": "npm-run-all -p prettier textlint"
+    "edit": "npm-run-all -p prettier textlint"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.3",
